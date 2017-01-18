@@ -40,6 +40,8 @@ export default (Component: Object, defaultStyles: Object, options: Object) => {
         styles = {};
       }
 
+      styles = Object.assign({}, defaultStyles, styles);
+
       const renderResult = super.render();
 
       if (propsChanged) {
